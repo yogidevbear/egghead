@@ -4,12 +4,12 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
 const rootElement = document.getElementById('root')
-const props = {
-    className: 'container',
-    children: 'Hello World'
-}
+const message = (props) => <div>{props.msg}</div>
 const element = (
-    <div {...props}>Hi there</div>
+    <div className="container">
+        {message({msg: 'Hello World'})}
+        {message({msg: 'Goodbye World'})}
+    </div>
 )
 ReactDOM.render(element, rootElement)
 </script>
