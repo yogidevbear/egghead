@@ -4,12 +4,12 @@
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
 const rootElement = document.getElementById('root')
-// const element = React.createElement(
-//     'div',
-//     {className: 'container'},
-//     'Hello World'
-// )
-const content = 'Hello World'
-const element = <div className="container">{content}</div>
+const props = {
+    className: 'container',
+    children: 'Hello World'
+}
+const element = (
+    <div {...props}/>
+)
 ReactDOM.render(element, rootElement)
 </script>
